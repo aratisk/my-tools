@@ -10,4 +10,12 @@ For detailed isntructions follow: https://linuxconfig.org/how-to-install-the-lat
 
 3. To run script .Download handbrake_batch_job.sh from github .If script does not work do a dos2unix. command: sudo apt-get install dos2unix. 
 
-4.Source input format can be any of: avi wmv flv mp4 webm mov mpg. IMP:Edit source_dir in the script before you run script. All output will be in same folder with -mod suffix.
+
+To test the scripts :
+==============
+
+1) Copy over the input_template folder. contains test files.
+2) Copy over the template folder to input. leave the original tempalte folder to add/remove files while testing is in progress from the input folder.
+3) Edit parent_dir in the script handbrake_batch_job.sh.
+4) Run script handbrake_batch_job.sh and verify output vs input from the files verify_ip.log,verify_op.log. you can run wc -l <filename> if the number of files are too many.
+5) (NOTE: deletes files so check the script contents before running).Run cleanup.sh . This copies over the contents of input_template so if you have added/modified files/file-structure, this will be reflected in input folder.

@@ -8,7 +8,6 @@
 
 handbrake=HandBrakeCLI
 source_dir="/mnt/d/Arati/ubuntu/input"
-#dest_dir="/mnt/d/Arati/ubuntu/output"
 #currently we only have mp4 as input files ,but leaving this code in for compatibility
 input_file_types=(avi wmv flv mp4 webm mov mpg)
 output_file_type="mp4"
@@ -33,8 +32,6 @@ do
 		out_file_temp=$(echo $in_file|sed "s/\(.*\.\)$input_file_types/\1$output_file_type/g")
 		#To add suffix to output file names.
 		out_file=$(echo $out_file_temp|sed 's/.mp4$/-mod.mp4/g')
-		#mkdir in destination folder and add files . currently commented as adding in same directory.
-		#out_file=$(echo $out_file_temp|sed "s/$source_dir:$dest_dir:g")
 		echo "INFO:Processing… >Input  "$in_file "to >Output "$out_file
 		# Convert the file
 		convert "$in_file" "$out_file"
