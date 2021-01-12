@@ -1,45 +1,63 @@
 #!/bin/bash
 
+
 ###############################################################################
 # Script to recursively search a directory and batch convert all files of a given
 # file type into another file type via HandBrake.
-#Takes input from $source_dir and add transcoded files to the same directory with '-mod' suffix.
+# Takes input from $source_dir and add transcoded files to $dest_dir. Note $base_dir needs to be added as a property, else will not work.
 ###############################################################################
 
-handbrake=HandBrakeCLI
-source_dir="/mnt/d/Arati/ubuntu/input"
-#currently we only have mp4 as input files ,but leaving this code in for compatibility
-input_file_types=(avi wmv flv mp4 webm mov mpg)
-output_file_type="mp4"
+#exit when any command fails. This is to cover the case when the base_dir has not been set correctly.
+set -e
 
+#TODO: can we move the values to property file
+handbrake=HandBrakeCLI
+base_dir="/mnt/d/Arati/ubuntu/handbrake_scripts"
+source_dir="$base_dir/input/"
+dest_dir="$base_dir/output/"
+	
 
 # Convert from one file to another
 convert() {
-	echo "" | $handbrake -i $1 -o $2  --preset="Fast 1080p30" -f av_mp4 -O -r 25 --pfr -b 2500 -2 -T -B 96 --verbose=1 
+	echo "" | $handbrake -i $1 -o $2  --preset="Fast 1080p30" -f av_mp4  
 }
 
-# loop over the types and convert
-for input_file_types in "${input_file_types[@]}"
-do
+#TODO: check why this does not exit code, when directory not present.
+if [ ! -d "$base_dir" ] 
+	then
+		echo "Exiting...no such folder"
+	exit 111 
+fi
+
+#make the directory structure. Since we need only the folder structure inside the input folder,hence cd to it.
+cd $source_dir
+find . -type d -exec mkdir -p -- $dest_dir{} \;
+cd ..
+
 
 	# Find the files and pipe the results into the read command.  The read command properly handles spaces in directories and files names.
-	#find "$source_dir" -name *.$input_file_type | while read in_file
-	find "$source_dir" -name "*.$input_file_types" -print0 | while IFS= read -r -d $'\0' in_file
 	#In order to correctly handle filenames containing whitespace and newline characters, you should use null delimited output. That's what the -print0 and read -d $'\0' is for.
+	find "$source_dir" -name "*.mp4" -print0 | while IFS= read -r -d $'\0' in_file
 	do
-	
-		# Replace the file type
-		out_file_temp=$(echo $in_file|sed "s/\(.*\.\)$input_file_types/\1$output_file_type/g")
-		#To add suffix to output file names.
-		out_file=$(echo $out_file_temp|sed 's/.mp4$/-mod.mp4/g')
+    	out_file=$(echo $in_file|sed 's/input/output/g')
 		echo "INFO:Processing… >Input  "$in_file "to >Output "$out_file
 		# Convert the file
 		convert "$in_file" "$out_file"
 		if [ $? != 0 ]
 	        then
-	            echo "ERROR:$in_file had problems" >> handbrake-errors.log
+	            echo "ERROR:$in_file had problems" >> $base_dir/handbrake-errors.log
 	        fi
+
 		echo ">INFO:Finished "$out_file "\n\n"
 	done
-done
+
 echo "DONE CONVERTING FILES"
+
+#Final step: list all the mp4 files in input and output directories
+find $source_dir -name '*.mp4' -type f |tee -a $base_dir/verify_ip.log
+find $dest_dir -name '*.mp4' -type f |tee -a $base_dir/verify_op.log
+#This appends a line at the end of file to say how many files are present in total.
+wc -l $base_dir/verify_ip.log |  cut -d' ' -f1 >> $base_dir/verify_ip.log
+wc -l $base_dir/verify_op.log |  cut -d' ' -f1>> $base_dir/verify_op.log
+
+#TODO: add a email function here to email error logs if any and also the verify logs
