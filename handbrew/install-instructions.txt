@@ -1,0 +1,54 @@
+I installed on wsl (ubuntu). Took the isntall link off brew website and followed the instructions form the installation summaries.
+Then followed instructions from here to installawsCLI --> Install instructions here : https://qiita.com/alokrawat050/items/56820afdb6968deec6a2
+
+https://brew.sh/ --> /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Output of above 
+=========
+==> Next steps:
+- Add Homebrew to your PATH in /home/aratisk/.profile:
+    echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> /home/aratisk/.profile
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+- Run `brew help` to get started
+- Further documentation:
+    https://docs.brew.sh
+- Install the Homebrew dependencies if you have sudo access:
+    sudo apt-get install build-essential
+    See https://docs.brew.sh/linux for more information
+- We recommend that you install GCC:
+    brew install gcc
+    
+     brew install gcc (output)
+     ================
+        ==> Summary
+🍺  /home/linuxbrew/.linuxbrew/Cellar/isl@0.18/0.18: 81 files, 6.4MB
+==> Installing gcc
+==> Pouring gcc-5.5.0_7.x86_64_linux.bottle.1.tar.gz
+==> Creating the GCC specs file: /home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_7/lib/gcc/x86_64-unknown-linux-gnu/5.5.0/specs
+🍺  /home/linuxbrew/.linuxbrew/Cellar/gcc/5.5.0_7: 1,351 files, 172.8MB
+==> Caveats
+==> isl@0.18
+isl@0.18 is keg-only, which means it was not symlinked into /home/linuxbrew/.linuxbrew,
+because this is an alternate version of another formula.
+
+For compilers to find isl@0.18 you may need to set:
+  export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/isl@0.18/lib"
+  export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/isl@0.18/include"
+  
+  ===
+  Brew installation failed (because the python script was runing??) 
+  So reinstalled using :
+  
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+=====
+
+You can now run: /usr/local/bin/aws --version
+==
+export PATH=~/.local/bin:$PATH
+==
+aratisk@DESKTOP-MN7MJJ4:~$ aws configure
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
+Default region name [None]: eu-west-2
+Default output format [None]: json
