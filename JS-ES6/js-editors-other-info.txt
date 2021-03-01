@@ -1,0 +1,14 @@
+codepen
+jsbin
+
+var a = tempvalue;
+alert(a); or even in document .getele.. (a) ==> does not need $var use..
+
+ypu can declare var like this :
+var fname,lname; rather than on seperate lines unless it needs initialisiation then do on seperate lines
+
+check the difference btw num++ and num=num++
+
+use shift+enter to write multi line code in console
+
+=== or == for comparisons. also ! work for boolean
