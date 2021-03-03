@@ -1,0 +1,3 @@
+Are you familiar with the concept of a CRUD app? (Any app with the ability to create, read, update, or delete information.) Those are always great practice because they incorporate every part of the stack, from web design to client state to servers to data storage. The classic beginner CRUD app is the to-do list. I recommend starting there!
+simple projects are for Example Text-Based RPGs, maybe a Text Editor...It also isn't that hard to make a Discord Bot...
+I'm actually trying to make a checkVowels app right now.
