@@ -12,3 +12,16 @@ check the difference btw num++ and num=num++
 use shift+enter to write multi line code in console
 
 === or == for comparisons. also ! work for boolean
+
+to change the style through JS use style.fontsize = "200" . remeber to ad quotes
+arrays : methods are:  .length. .push
+objects {key : "value" , key2 : "value2"}. var car ={type="bmw",colour="white").. rather tahn index use car.colour. 
+Arrays are numbered index while objects are named index. So if you need to acces using string use objects
+
+document.getElementById and document.write
+
+for loops for an array:
+for (i = 0 ; i < arr.length ; i++){console.log(arr[i];}
+var x; for (x of arr) { document.write(x +'<br>')
+var i = 0; while (i < arr.length){ document.write(arr[i] +'<br>') i++
+do while if u need executed atleadst once: do { document.write(arr[i] +'<br>'} while (i < arr.length)
