@@ -1,0 +1,2 @@
+Rather than install can use the template from here --> https://getbootstrap.com/docs/5.0/getting-started/introduction/ --> 
+container concepts --> https://getbootstrap.com/docs/5.0/layout/containers/
