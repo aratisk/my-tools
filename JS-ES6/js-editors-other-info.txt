@@ -25,3 +25,12 @@ for (i = 0 ; i < arr.length ; i++){console.log(arr[i];}
 var x; for (x of arr) { document.write(x +'<br>')
 var i = 0; while (i < arr.length){ document.write(arr[i] +'<br>') i++
 do while if u need executed atleadst once: do { document.write(arr[i] +'<br>'} while (i < arr.length)
+
+Different Kinds of Loops
+JavaScript supports different kinds of loops:
+
+for - loops through a block of code a number of times
+for/in - loops through the properties of an object
+for/of - loops through the values of an iterable object
+while - loops through a block of code while a specified condition is true
+do/while - also loops through a block of code while a specified condition is true
