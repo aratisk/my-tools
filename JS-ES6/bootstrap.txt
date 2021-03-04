@@ -1,2 +1,13 @@
 Rather than install can use the template from here --> https://getbootstrap.com/docs/5.0/getting-started/introduction/ --> 
 container concepts --> https://getbootstrap.com/docs/5.0/layout/containers/
+Interesting classes to use: container, container-flex, row,justify-content-md-center,col-md,col-sm-2,flex-last
+grid layout
+flex box: https://v4-alpha.getbootstrap.com/utilities/flexbox/
+jumbotron
+useful colou: #aaa
+also check bootstrap utilities and typography here: 
+
+https://mdbootstrap.com/docs/standard/navigation/footer/
+or getbootstrap
+
+other tools to explore: sublime text(like a notepad text editor), MAMP (wwhich is like a server . apaceh and sql server. and if pointed to your source files, use local host to access.)
