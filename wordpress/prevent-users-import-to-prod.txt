@@ -1,0 +1,7 @@
+refere thes docs:
+https://updraftplus.com/forums/topic/site-migration-except-for-user-authentication/
+https://updraftplus.com/faqs/how-can-i-exclude-a-specific-table-from-the-backup/
+
+exclude wp_user and wp_usermeta
+
+do on staging server 
