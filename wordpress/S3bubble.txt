@@ -1,0 +1,11 @@
+reference : https://www.youtube.com/watch?v=f0Q0-QWL22g
+
+
+better reference this:
+https://youtu.be/tLLhq0kg2ME
+
+so s3bubble app.and install the plugin. Then configure the website in app. 
+
+
+Alos configure the s3 backend roles,iam users and s3 buckets in s3 bubble app. 
+start a new page and add teh div from the app to view the video
