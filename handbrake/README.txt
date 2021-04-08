@@ -19,3 +19,5 @@ To test the scripts :
 3) Edit parent_dir in the script handbrake_batch_job.sh.
 4) Run script handbrake_batch_job.sh and verify output vs input from the files verify_ip.log,verify_op.log. you can run wc -l <filename> if the number of files are too many.
 5) (NOTE: deletes files so check the script contents before running).Run cleanup.sh . This copies over the contents of input_template so if you have added/modified files/file-structure, this will be reflected in input folder.
+
+for numfit use very fast 720p30 and web optimised. Make sure aspect ratio is 16:9
