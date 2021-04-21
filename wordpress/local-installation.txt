@@ -1,0 +1,24 @@
+I installed from here:https://bitnami.com/stack/wordpress
+but can also do xampp - a bit more lengthy and involved Read difference here: https://ivyleaguecontent.com/keepin-it-real-for-wp-end-users-xampp-vs-bitnami-installation.html
+
+mysql: http://127.0.0.1/phpmyadmin root and the passowrd we set
+wordpress: http://127.0.0.1/wordpress/
+
+emails : setup support@,sales@,billing@
+
+shop ,cart, checkout,my account, 
+
+themes for woo commerce: storefront theme
+logo --> appearance --> customize --> site identity
+
+Menus: set it on the appearance --> customize.
+to set homepage: create a page ans set to homepage (dropdown). add meta-slider for the home page imae slider. does numberfit use slider for homepage
+To remove the ride sidebar , make the page full width(dropdown)
+
+backup:
+plugun - updraftwordpress backup plugin, 
+security pluguin -wordfence
+
+ssl: issue a certificate for our domain.how is this done for numberfit?
+
+develop[er options: freelancer
