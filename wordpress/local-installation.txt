@@ -1,4 +1,6 @@
 I installed from here:https://bitnami.com/stack/wordpress
+
+
 but can also do xampp - a bit more lengthy and involved Read difference here: https://ivyleaguecontent.com/keepin-it-real-for-wp-end-users-xampp-vs-bitnami-installation.html
 
 mysql: http://127.0.0.1/phpmyadmin root and the passowrd we set
