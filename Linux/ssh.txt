@@ -1,0 +1,16 @@
+setting up key based authentication rather than password based authentication:
+public key lives on server that we will be ssh ing into ie the remote machine and private key remains with us
+if you dont have a key use the following command on ur machine:
+ssh-keygen -t rsa -b 4096
+this creates a ~/.ssh folder with 
+id_rsa & id_rsa.pub
+next copy over the id_rsa.pub to the remote server . either maually or scp. either way create a ~/.ssh folder on the remote machine if it does not exist. then scp using
+scp ~/.ssh/id_rsa.pub userid@ipaddress:location-tocopy-to/file-name. you need passowrd to login now as key based autherntication is not setup yet.
+
+complet this using the instructions here: https://www.youtube.com/watch?v=vpk_1gldOAE
+
+sudo apt update && sudo apt upgrade
+sudo apt install openssh-client
+
+to check if ssh is running on server: 
+sudo service ssh status
