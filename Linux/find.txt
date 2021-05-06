@@ -1,0 +1,10 @@
+https://www.tecmint.com/35-practical-examples-of-linux-find-command/
+
+to test these:
+1)remove old files:
+find /db_backups/30_plus_days \
+    -type f -mtime +90 -print \
+    -exec mv {} /db_backups/90_plus_days/ 2>&1 \; \
+    >>/db_backups/move.log
+    
+2)how to move folders (move doesnt copy the folder structure so use a while loop?)    
