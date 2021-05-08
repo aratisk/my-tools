@@ -21,3 +21,5 @@ To test the scripts :
 5) (NOTE: deletes files so check the script contents before running).Run cleanup.sh . This copies over the contents of input_template so if you have added/modified files/file-structure, this will be reflected in input folder.
 
 for numfit use very fast 720p30 and web optimised. Make sure aspect ratio is 16:9
+
+other examples: https://superuser.com/questions/394516/how-to-convert-50-episodes-from-dvd-into-50-mp4-with-handbrake-easily
