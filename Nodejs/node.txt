@@ -1,0 +1,13 @@
+nvm - for intalling multiple versions
+npm
+npx?
+ideally install node on wsl and consider using homebrew
+
+use repl to test code(type node in cmd), or use editor type .editor in cmd to do more complex work. once done tyoe c+v to return to repl and test
+
+use tab to autocomplete . double tab to see all options
+_ stores teh last value 
+
+writing scripts
+const http = require('http'); (in a .js extenstion file)
+in a .mjs file ie ecma script : import http from 'http'; or even import the method directly from the module rather than the whole http object : like import {createServer} from 'http'
