@@ -1,0 +1,1 @@
+https://www.digitalocean.com/community/questions/how-do-i-make-ubuntu-s-resize2fs-command-work-after-increasing-droplet-size
