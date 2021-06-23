@@ -1,0 +1,4 @@
+Mount the drive with sudo mount -t drvfs M: /mnt/m
+Note the letter of the network drive that you would like to map in WSL. We will use M: in this example.
+Create a new folder for that drive letter under /mnt if it does not already exist. ( ex: mkdir /mnt/m )
+Mount the drive with sudo mount -t drvfs M: /mnt/m.
