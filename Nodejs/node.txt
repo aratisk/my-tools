@@ -1,6 +1,6 @@
 nvm - for intalling multiple versions
 npm
-npx?
+npx like npm but instead of downloading something, it actually runs the command for you.
 ideally install node on wsl and consider using homebrew
 
 use repl to test code(type node in cmd), or use editor type .editor in cmd to do more complex work. once done tyoe c+v to return to repl and test
