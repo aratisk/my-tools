@@ -1,0 +1,12 @@
+Angular is a complete framework while React is only a library.
+so why do we isntall node? not because we use node, but only for the package manager : NPM
+use sudo npm i -g create-react-app@1.5.2 (specify the version here as we required a specific version)
+extensions: 
+simple react snippets by BUrke Holland
+prettier - code formatter. by Esben Peterson
+add --> "editor.formatOnSave":true
+theme sued is ayu mirage
+create-react-app react-app --> this installs dev server,webpack,babel.
+npm run eject @ 10.22 in video
+JSX is javascript xml. we write code in JSX as its sipler than react code. and Babel will compile the JSX to react code in the backend. 
+serverwroker : basically serves files from cache in production env.
