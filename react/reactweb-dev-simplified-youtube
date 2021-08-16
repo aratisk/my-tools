@@ -1,0 +1,8 @@
+create a folder withut any space and all lower case
+npx create-react-app .
+after setup you need to use 1)npm start for dev and 2)npm start build for prod (builds, minifies and creates a prod version of our application that we can deploy onto a prod server).
+the folders created are :1) modules : for the libraries. 2) public : has the html file --> index.html which just has a div element called root . No style sheets or script tags. Alll of our application is going to be added in the root div. React will generate the html and add it here. 3)src : all the js and css, test files,logos ie mostly everything that is part of the source files go in here. main files a)index.js which is where our application starts . ReactDOM.render(<App />, document.getElementById('root')) b)App.js 
+To start delete all the contents 1) App.js : return null in the function App(). remove the 2 imports other than react import. 2)remove test file ,css files and logo , service worker files etc so you are only left with App.js,index.js 3)remove serverworker related code and also remove all imports except react,reactDOM and App.
+No we are ready to start and we normally start at the App.js . we will use JSX which is the React form of html. Install 'ES7 React/Redux/GraphQL/React-Native snippets' extension. now type 'rfc' and this creates a function component.
+use <> </> ie a fragment to return multiple elements like <> <TodoList /> <input type="text" /> </>. This was used within the App.js for example.
+import React, {useState} , from react
