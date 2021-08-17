@@ -10,3 +10,37 @@ create-react-app react-app --> this installs dev server,webpack,babel.
 npm run eject @ 10.22 in video
 JSX is javascript xml. we write code in JSX as its sipler than react code. and Babel will compile the JSX to react code in the backend. 
 serverwroker : basically serves files from cache in production env.
+within index.js , you can do 
+const element =<h1>hello world</h1>;
+ReactDom.renderElement(element,document.getElementById("root"));
+install bootstrap : npm i bootstrap@4.1.1
+create a file under src --> components .create as .jsx file rather than .js file
+code snippets shortcuts: imrc, cc
+class counter extends component{
+render(){
+return <h1>hello world</h1>;
+}
+then in index.js import bootstrap, and counter. then in reactdom.reder replace <app /> with <counter />
+
+multi cursor editing. select a word . then select c+d and it will seelct another occurence for you
+instead of <div> as parent inside a return (), you can use <react.fragment>
+
+return <span> {this.formatCount()} --> ie use {} to render values dynamically
+
+and write fn
+formatCount(){
+const {count} = this.state;
+return count === 0 ? <h1>zero</h1> : count;
+
+fir the blue background bootstrap classes are : badge, badge-primary and set margin with m-2. others are badge-warning
+for button : btn, btn-secondary, btn-sm. Also use className rather than class
+
+if you want to use the style attribute rather than just classes then: the there are 2 methods to do it 
+1)inline-styles: <span style={{ fontSize:30 }} ClassName="badge">
+2) add a property called styles 
+styles:{
+fontSize:10
+fontWeight:"bold"
+}
+<span style={this.styles } ClassName="badge">
+Note the css propertiesa re in camelcase and the double bracket when doing inline styles. Also when u add 10 in fontSize, it automatically converts to 10px.
