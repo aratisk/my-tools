@@ -1,0 +1,26 @@
+93
+
+Below will reinitialize your local repo; also clearing remote repos (ie origin):
+
+git init
+Then below, will create 'origin' if it doesn't exist:
+
+git remote add origin [repo-url]
+Else, you can use the set-url subcommand to edit an existing remote:
+
+git remote set-url origin [repo-url]
+Also, you can check existing remotes with
+
+git remote -v
+Hope this helps!
+
+git remote add => ADDS a new remote.
+
+git remote set-url => UPDATES existing remote.
+
+===
+git init  
+git remote add origin your_repo.git  
+git remote -v  
+git status  
+===
