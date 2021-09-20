@@ -1,0 +1,29 @@
+moshi :
+node is just an env for executing javascript. basically js was run in browsers. So dahl? took the v8 engine from chrome and build additional modules around it using c++ and this is node.
+Node is asynchronous and an eg he mentioned paypal made a module using nodejs which required less code was faster. 
+
+some global objects in node global objects:
+
+console.log()
+setTimeout()
+clearTimeout()
+setInterval()
+clearInterval()
+
+In browser window documentetc can be used. window represents the global scope. hence if you use any of the above global objects it defaults to window. eg: window.console.log()
+if var message = ''; it become window.message
+But since in node there is no window onj 'global' represents the global object so use global.console.log()
+Also the message will be scoped to the file so global.message will return undefined.
+
+module is not public but you can use 
+module.exports.log = log (exporting a log function)
+to import a module use 
+const logger = require ('./logger'); --> returns and object and then invoke the log function on the object.
+logger.log('msg');
+
+another way is to export the function alone and not a object eg 
+module.exports = log
+and in the destination use:
+logger = require ('./logger');
+logger('msg'
+jshint test??
