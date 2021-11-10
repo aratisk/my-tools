@@ -1,0 +1,6 @@
+https://www.codegrepper.com/code-examples/javascript/how+to+get+query+param+length+in+javascript
+https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript?rq=1
+https://stackoverflow.com/questions/32046990/count-the-number-of-parameters-in-query-string
+https://nodejs.org/en/knowledge/HTTP/clients/how-to-access-query-string-parameters/
+https://stackoverflow.com/questions/5223/length-of-a-javascript-object
+https://stackoverflow.com/questions/55514388/how-to-handle-query-string-node-js-aws-lambda
