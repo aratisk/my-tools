@@ -1,0 +1,14 @@
+Get the default Bitnami application and database user name
+
+WordPress, including WordPress Multisite
+
+Application user name: user
+
+Database user name: root
+
+
+The bitnami_application_password file is located in your home directory. You can read it with the following command:
+
+sudo cat /home/bitnami/bitnami_application_password
+
+https://www.webhostingforbeginners.net/how-to-setup-wordpress-on-lightsail-and-use-amazon-aurora-rds/
