@@ -1,0 +1,8 @@
+How to Get Query String Parameters with JavaScript
+https://davidwalsh.name/query-string-javascript
+tutorial
+https://sebhastian.com/javascript-tutorials/
+some examples:
+https://github.com/jscomplete/ngs/tree/master/1-getting-started
+Build a Website with Node.js and Express:
+https://auth0.com/blog/create-a-simple-and-stylish-node-express-app/
